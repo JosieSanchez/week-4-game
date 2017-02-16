@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crystals</title>
+
+  <!-- Bootstrap File -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<body>
+
+  <!-- Overall Bootstrap Grid -->
+
+  <div class="container">
+
+    <!-- Jumbotron with Title -->
+    <div class="jumbotron">
+      <h1 class="text-center"><strong>Crystals Collector: The Game!</strong></h1>
+      <hr>
+      <div class="text-center">
+        <button class="btn btn-warning btn-xs theme-button"><span class="glyphicon glyphicon-music"></span> Play Theme!</button>
+        <button class="btn btn-default btn-xs pause-button"><span class="glyphicon glyphicon-pause"></span> Pause Song</button>
+      </div>
+    </div>
+
+
+  <div class="jumbotron">
+    <h2 class="how to play">How to Play</h2>
+    <hr>
+    <p>You will be given a random number at the start of the game.</p>  
+    <p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p> 
+    <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+    <p>The value of each crystal is hidden from you until you click on it.</p>
+    <p>Each time when the game starts, the game will change the values of each crystal.</p>
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="panel panel-default col-md-3">
+        <div class="panel-heading">
+          <h3 class="panel-title">Computer Pick</h3>
+        </div>
+        <div class="panel-body text-center">
+          <h1 id="computer-pick">???</h1>
+        </div>
+        </div>
+
+        <div class="panel panel-default col-md-3">
+        <div class="panel-heading">
+          <h3 class="panel-title">Your total score is</h3>
+        </div>
+        <div class="panel-body text-center">
+          <h1 id="your-total-score-is">???</h1>
+        </div>
+        </div>
+
+        <div class="panel panel-default col-md-3">
+        <div class="panel-heading">
+          <h3 class="panel-title">Wins</h3>
+        </div>
+        <div class="panel-body text-center">
+          <h1 id="score-board">????</h1>
+        </div>
+        </div>
+
+        <div class="panel panel-default col-md-3">
+        <div class="panel-heading">
+          <h3 class="panel-title">Losses</h3>
+        </div>
+        <div class="panel-body text-center">
+          <h1 id="score-board">????</h1>
+        </div>
+
+        </div>
+        </div>
+
+
+    </div>
+
+  <div class="row">
+    <div class="col-md-12"> 
+     <div class="jumbotron">
+    <h2 class= "You Pick">Choose</h2>
+      <hr>
+        
+        <button id="startBtn" class="btn btn-default" value="1"><h1>Start Game</h1></button>
+
+          <button id="rubyBtn" class="btn btn-default" value="2"><h1><img src="assets/images/ruby.jpg" alt="ruby" width="100" height= "150"></h1></button>
+          
+          <button id="blueDiamondBtn" class="btn btn-default" value="3"><h1><img src="assets/images/blue-diamond.png" alt="blue-diamond" width="100" height= "150"></h1></button>
+          
+          <button id="emeraldBtn" class="btn btn-default" value="4" ><h1><img src="assets/images/green.jpg" alt="emerald" width="100" height= "150"></h1></button>
+
+          <button id="yellowStoneBtn" class="btn btn-default" value="5"><h1><img src="assets/images/yellow.jpg" alt="yellow-stone" width="100" height= "150"></h1></button>
+      </div>
+      </div>        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+  var wins = 0;
+    var losses = 0;
+
+    $(document).ready(function() {
+      var audioElement = document.createElement("audio");
+      audioElement.setAttribute("src", "Assets/sms-alert-1-daniel_simon.mp3");
+
+    //when the user clicks start game button.  Computer Pick # will be generated.
+
+    $("#startBtn").on("click", function(){
+     var computerPick = Math.floor((Math.random() * 100) + 19);
+    $("#computer-pick").html(computerPick);
+      })
+      function startgame() {}
+      
+    $("#rubyBtn").on("click", function(){
+    var yourtotalscoreis = Math.floor((Math.random() * 12) + 1);
+    $("your-total-score-is").html(yourtotalscoreis);
+      })
+      function ruby(){}
+     
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    });//this is where the document.ready ends
+
+</script>
+    </div> <!--container closed-->
+    </body>
+    
+    </html>
+   
